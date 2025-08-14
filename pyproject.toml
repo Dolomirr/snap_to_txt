@@ -1,0 +1,15 @@
+[project]
+name = "text-from-img"
+version = "0.1.0"
+description = "Quick image text recognition"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pillow",
+    "mss",
+    "pytesseract"
+]
+
+
+[project.scripts]
+snap_to_txt = "main:main"
