@@ -12,4 +12,4 @@ dependencies = [
 
 
 [project.scripts]
-snap_to_txt = "snap_to_txt.cli:main"
+snap_to_txt = "text-from-img.cli:main"
