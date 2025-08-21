@@ -9,7 +9,10 @@ from src.structure import scan_n_structure
 
 def main() -> None:
     image = select_region()
-    scan_n_structure(image)
+    if isinstance(image, Image):
+        scan_n_structure(image)
+    else:
+        print('Sorry, was not able to scan image.')
 
     
 if __name__ == "__main__":

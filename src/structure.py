@@ -29,7 +29,7 @@ def scan_n_structure(img):
         if not placed:
             lines.append({"words":[w], "y_center": w['y']+w['h']/2})
 
-    lines = sorted(lines, key=lambda L: L['y_center'])
+    lines = sorted(lines, key=lambda line: line['y_center'])
     paragraphs = []
     cur_para = []
     last_y = None
