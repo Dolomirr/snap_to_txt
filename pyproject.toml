@@ -1,15 +1,24 @@
 [project]
-name = "text-from-img"
+name = "snap_to_txt"
 version = "0.1.0"
 description = "Quick image text recognition"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = "==3.12"
 dependencies = [
-    "pillow",
-    "mss",
-    "pytesseract"
+    "pillow==11.3.0",
+    "mss==10.1.0",
+    "pytesseract==0.3.13"
 ]
 
 
 [project.scripts]
-snap_to_txt = "text-from-img.cli:main"
+snap_to_txt = "snap_to_txt.cli:main"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["snap_to_txt*"]
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"
